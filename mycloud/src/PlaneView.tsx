@@ -6,12 +6,10 @@ import SideImg from './assets//side.png'
 type Props = {}
 
 function PlaneView({}: Props) {
-
   return (
     <div>
       <SkyBackground>
           <PlaneWindow src={PlaneImg}>
-
           </PlaneWindow>
           <Container>
           </Container>
@@ -21,12 +19,13 @@ function PlaneView({}: Props) {
 }
 
 export default PlaneView
+//보다 나은 방법을 고안해봐야함 'sky background는 window 넓이에 맞추어 이동
 const skyMovement = keyframes`
   0% {
-    background-position : 0px;
+    background-position : 0px 0px;
   }
   100% {
-    background-position : -1000px;
+    background-position : -2700px 0px;
   }
 `
 
@@ -41,12 +40,11 @@ const SkyBackground = styled.div`
     z-index: 3;
     background-size : cover;
     background-image : url(${SkyImg});
-    animation : ${skyMovement} 100s 1s infinite linear alternate;
+    animation : ${skyMovement} 120s 1s infinite linear alternate;
 `
 
 const Container = styled.div`
     width: 100%;
-    height: 100vh;
     background-size : cover;
     z-index : 3;
     background-image: url(${SideImg})

@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import PlaneImg from './assets//photo-1543797414-a0c3ad076f7c-removebg.png'
 import SkyImg from './assets//pexels-pixabay-531972.jpg'
 import SideImg from './assets//side.png'
+import Timer from './Timer';
 type Props = {}
 
 function PlaneView({}: Props) {
@@ -12,6 +13,7 @@ function PlaneView({}: Props) {
           <PlaneWindow src={PlaneImg}>
           </PlaneWindow>
           <Container>
+            <Timer></Timer>
           </Container>
       </SkyBackground>
     </div>
